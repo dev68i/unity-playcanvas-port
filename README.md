@@ -37,13 +37,13 @@ export class RotatePlayer extends MonoBehaviour {
         if (this.app.keyboard.isPressed(pc.KEY_A)) {
             const rotate = QuternionEx.toEulerAngles(this.entity.getRotation());
             rotate.y = 0;
-            this.entity.setRotation(QuternionEx.euler(rotate));
+            this.entity.setRotation(QuaternionEx.euler(rotate));
         }
 
         if (this.app.keyboard.isPressed(pc.KEY_D)) {
             const rotate = QuternionEx.toEulerAngles(this.entity.getRotation());
             rotate.y = 180;
-            this.entity.setRotation(QuternionEx.euler(rotate));
+            this.entity.setRotation(QuaternionEx.euler(rotate));
         }
     }
 }
